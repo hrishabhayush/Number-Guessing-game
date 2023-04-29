@@ -3,7 +3,6 @@ from art import logo
 
 print(logo)
 
-
 def check(guess, number, life):
     '''For a random number chosen by the system, the user provides the guess against it. If it's right the user wins, otherwise the user loses a life.'''
     if guess == number:
@@ -20,12 +19,14 @@ def check(guess, number, life):
 
 def game():
     '''The game is about guessing the number in least tries as possible. The hard difficulty is choosing the number in 5 tries and easier version is choosing the number in 10 tries.'''
-    mode = input("Choose your mode of difficulty: 'Easy' or 'Hard' ").lower()
+
+    print("Welcome to the number guessing game. I'm thinking of a number between 1 and 100. Try to guess it ;)")
+    mode = input("Choose your mode of difficulty: 'Easy' or 'Hard' \n").lower()
     if mode == "easy":
         lives = 10
     else:
         lives = 5
-
+    
     num = random.randint(1, 100)
     guess_num = 0
     while guess_num != num:
@@ -36,6 +37,5 @@ def game():
         if lives == 0:
             print(f"You've ran out of lives. The right answer was {num}")
             return
-
-
+            
 game()
