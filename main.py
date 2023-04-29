@@ -37,5 +37,5 @@ def game():
         if lives == 0:
             print(f"You've ran out of lives. The right answer was {num}")
             return
-            
+        
 game()
